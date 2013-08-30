@@ -75,7 +75,7 @@ base_url: "../"
 
     <h3 id="grid-media-queries">Media queries</h3>
     <p>We use the following media queries to create the key breakpoints in our grid system.</p>
-{% highlight css %}
+{% highlight less %}
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
@@ -89,7 +89,7 @@ base_url: "../"
 @media (min-width: @screen-lg-min) { ... }
 {% endhighlight %}
     <p>We occasionally expand on these media queries to include a <code>max-width</code> to limit CSS to a narrower set of devices.</p>
-{% highlight css %}
+{% highlight less %}
 @media (max-width: @screen-xs-max) { ... }
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
@@ -410,7 +410,7 @@ base_url: "../"
 
     <h4>Variables</h4>
     <p>Variables determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.</p>
-{% highlight css %}
+{% highlight less %}
 @grid-columns:              12;
 @grid-gutter-width:         30px;
 @grid-float-breakpoint:     768px;
@@ -418,7 +418,7 @@ base_url: "../"
 
     <h4>Mixins</h4>
     <p>Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.</p>
-{% highlight css %}
+{% highlight less %}
 // Creates a wrapper for a series of columns
 .make-row(@gutter: @grid-gutter-width) {
   // Then clear the floated columns
@@ -554,7 +554,7 @@ base_url: "../"
 
     <h4>Example usage</h4>
     <p>You can modify the variables to your own custom values, or just use the mixins with their default values. Here's an example of using the default settings to create a two-column layout with a gap between.</p>
-{% highlight css %}
+{% highlight less %}
 .wrapper {
   .make-row();
 }
@@ -2230,7 +2230,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 <div class="pull-left">...</div>
 <div class="pull-right">...</div>
 {% endhighlight %}
-{% highlight css %}
+{% highlight less %}
 // Classes
 .pull-left {
   float: left !important;
@@ -2260,7 +2260,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 <!-- Usage as a class -->
 <div class="clearfix">...</div>
 {% endhighlight %}
-{% highlight css %}
+{% highlight less %}
 // Mixin itself
 .clearfix() {
   &:before,
@@ -2286,7 +2286,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 <div class="show">...</div>
 <div class="hide">...</div>
 {% endhighlight %}
-{% highlight css %}
+{% highlight less %}
 // Classes
 .show {
   display: block !important;
@@ -2310,7 +2310,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% highlight html %}
 <a class="sr-only" href="#content">Skip to content</a>
 {% endhighlight %}
-{% highlight css %}
+{% highlight less %}
 // Usage as a Mixin
 .skip-navigation {
   .sr-only();
@@ -2323,7 +2323,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% highlight html %}
 <h1 class="text-hide">Custom heading</h1>
 {% endhighlight %}
-  {% highlight css %}
+  {% highlight less %}
 // Usage as a Mixin
 .heading {
   .text-hide();
